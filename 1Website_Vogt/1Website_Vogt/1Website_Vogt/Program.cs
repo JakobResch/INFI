@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace _1Website_Vogt {
-    public class Program { öaskf
+    public class Program { asd
         public static void Main(string[] args) {
             CreateHostBuilder(args).Build().Run();
         }
