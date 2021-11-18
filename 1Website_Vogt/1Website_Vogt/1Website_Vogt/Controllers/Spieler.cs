@@ -9,5 +9,5 @@ namespace _1Website_Vogt.Controllers {
         public IActionResult Index() {
             return View();
         }
-    }f
-}ss
+    }
+}
