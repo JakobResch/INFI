@@ -9,5 +9,10 @@ namespace _1Website_Vogt.Models {
         public IActionResult Index() {
             return View();
         }
+
+        public IActionResult Navigation()
+        {
+            return View();
+        }
     }
 }
