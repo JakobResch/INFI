@@ -1,21 +1,13 @@
 ﻿
-
-.headercontainer{
-    display:flex;
-    justify-content:space-between;
+body {
+    background-color: dimgray;
 }
-
-.box1 {
-    width: 4500px;
-    height: 2680px;
-    background-color: #3b3b40;
-    /*background-image: url(../Multimedia/myindigo_logo.png);*/
-}
-
-#container {
-    width: 100%;
+.container {
     min-width: 640px;
-    margin: 0px auto;
+    
 }
+
+
+
 
 
