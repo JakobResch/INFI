@@ -1,11 +1,123 @@
-﻿
-body {
-    background-color: dimgray;
-}
-.container {
-    min-width: 640px;
+﻿html, body {
+    margin : 0;
+    padding : 0;
+    height :100%;
+    text-align :center ;
     
 }
+
+section {
+    min-height: 100%;
+}
+
+.container {
+    min-width: 800px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, a {
+    font-family: 'crossorigin', sans-serif;
+    font-weight:500;
+    color: #494949;
+}
+
+h3{
+    font-size:40px;
+    padding-top: 8%;
+}
+
+h4, p{
+    font-family :'crossorigin', serif;
+}
+
+hr{
+    width: 30px;
+    height: 3px;
+    background: #494949;
+    border: 0;
+    margin: 0 auto 40px auto;
+}
+
+li, #logo {
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+#Pfeil{
+    padding-top: 100px;
+}
+
+#verschieben{
+    padding-top: 100px;
+}
+
+
+/****************HEADER*******************************/
+
+header{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: gray;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#logo{
+    width: 140px;
+    float: left;
+    margin: 0 0 0 50px;
+}
+
+#logo:hover{
+    opacity: 0.5;
+}
+
+#logo img{
+    width: 100%;
+}
+
+header nav{
+    float: right;
+    margin: 10px 50px 0 0;
+}
+
+header nav ul li{
+    float: left;
+    margin-right : 30px;
+    margin-top: 10px;
+}
+
+header nav ul li:hover {
+        padding-top: 1%;
+}
+
+
+/****************HOME*******************************/
+
+#Home {
+    /*Slideshow*/
+    background-color: gray;
+    background-attachment: fixed;
+}
+
+#Home h1 {
+    margin: 240px auto 0 auto;
+    
+}
+
 
 
 

@@ -6,24 +6,119 @@
     <title>@ViewData["Title"] - _1Website_Vogt</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
+<centre>
+    <body>
 
-    <header>
+
+        <header>
+            <!---------Menu-Leiste------------------------------->
+            <div id="logo">
+                <a href="#">
+                    <img src="~/Multimedia/myindigo_logo.png" alt="LOGO" height="65" width="100"/>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a><href ="#Lieblingsplatz">Lieblingsplatz</a></li>
+                    <li><a><href ="#Bestellen">Bestellen</a></li>
+                    <li><a><href ="#Home">myIndigo.com</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <!---------Home------------------------------->
         
-    </header>
-    <main>
-        @RenderBody()
-    </main>
-        <footer>
+        <section id="Home">
+            <hr />
 
+            <!------Diashow----------------------------->
+            <div id="verschieben" class="w3-content w3-section" style="max-width:500px">
+
+                <img class="mySlides" src="~/Multimedia/Download.png" style="width:100%" />
+                <img class="mySlides" src="~/Multimedia/Download1.png" style="width:100%" />
+                <img class="mySlides" src="~/Multimedia/Download3.png" style="width:100%" />
+
+            </div>
+
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+            </script>
+            <!------------------------------------->
+            <div id="Pfeil">
+                <a href="#about">
+                    <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
+
+                </a>
+            </div>
+        </section>
+
+        <!---------About------------------------------->
+        <section id="about">
+            <h3>About</h3>
+            <hr />
+            <img src="~/Multimedia/myindigo_logo.png" alt="ka" />
+            <h4>MyIdigo</h4>
+            <p>blablablabla</p>
+        </section>
+
+        <!---------Contact------------------------------->
+        <section id="Rezension">
+            <h3>Rezension</h3>
+            <hr />
+            <form>
+                <input type="email" tabindex="1" placeholder="E-Mail" /><br />
+                <input type="text" tabindex="2" placeholder="Betreff" /><br />
+                <textarea tabindex="3" placeholder="text"></textarea><br />
+                <input calss="button" type="submit" />
+
+            </form>
+        </section>
+
+
+        <main>
+            @RenderBody()
+
+        </main>
+
+        <!---------Footer------------------------------->
+        <footer>
+            <p>
+                &copy; MyIddigo
+            </p>
         </footer>
-    </div>
-    
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</centre>
 </html>
