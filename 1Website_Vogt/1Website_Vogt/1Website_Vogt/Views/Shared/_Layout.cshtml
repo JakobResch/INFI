@@ -13,112 +13,118 @@
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        .mySlides {
-            display: none;
-        }
     </style>
 </head>
-<centre>
+
     <body>
+        <centre>
+
+            <header>
+                <!---------Menu-Leiste------------------------------->
+                <div id="logo">
+                    <a href="#">
+                        <img src="~/Multimedia/myindigo_logo.png" alt="LOGO" height="65" width="100" />
+                    </a>
+                </div>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#Lieblingsplatz">Lieblingsplatz</a></li>
+                        <li><a><href ="#Bestellen">Bestellen</a></li>
+                        <li><a><href ="#Home">myIndigo.com</a></li>
+                    </ul>
+                </nav>
+            </header>
 
 
-        <header>
-            <!---------Menu-Leiste------------------------------->
-            <div id="logo">
-                <a href="#">
-                    <img src="~/Multimedia/myindigo_logo.png" alt="LOGO" height="65" width="100"/>
-                </a>
-            </div>
-            <nav id="main-nav">
-                <ul>
-                    <li><a><href ="#Lieblingsplatz">Lieblingsplatz</a></li>
-                    <li><a><href ="#Bestellen">Bestellen</a></li>
-                    <li><a><href ="#Home">myIndigo.com</a></li>
-                </ul>
-            </nav>
-        </header>
 
+            <!---------Home------------------------------->
 
+            <section id="Home">
+                <hr />
 
-        <!---------Home------------------------------->
-        
-        <section id="Home">
-            <hr />
+                <!------Diashow----------------------------->
+                <div id="verschieben" class="w3-content w3-section solid" style="max-width:500px">
 
-            <!------Diashow----------------------------->
-            <div id="verschieben" class="w3-content w3-section" style="max-width:500px">
+                    <img class="mySlides solid" src="~/Multimedia/bild2.png" style="width:100%" />
+                    <img class="mySlides solid" src="~/Multimedia/bild3.png" style="width:100%" />
+                    <img class="mySlides solid" src="~/Multimedia/bild4.png" style="width:100%" />
+                    <img class="mySlides solid" src="~/Multimedia/bild5.png" style="width:100%" />
 
-                <img class="mySlides" src="~/Multimedia/Download.png" style="width:100%" />
-                <img class="mySlides" src="~/Multimedia/Download1.png" style="width:100%" />
-                <img class="mySlides" src="~/Multimedia/Download3.png" style="width:100%" />
+                </div>
 
-            </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
 
-            <script>
-                var myIndex = 0;
-                carousel();
-
-                function carousel() {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) { myIndex = 1 }
+                        x[myIndex - 1].style.display = "block";
+                        setTimeout(carousel, 5000); // Change image every 2 seconds
                     }
-                    myIndex++;
-                    if (myIndex > x.length) { myIndex = 1 }
-                    x[myIndex - 1].style.display = "block";
-                    setTimeout(carousel, 2000); // Change image every 2 seconds
-                }
-            </script>
-            <!------------------------------------->
-            <div id="Pfeil">
-                <a href="#about">
-                    <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
+                </script>
+                <!------------------------------------->
+                <div id="PfeilAbout">
+                    <a href="#about">
+                        <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
 
-                </a>
-            </div>
-        </section>
+                    </a>
+                </div>
+            </section>
 
-        <!---------About------------------------------->
-        <section id="about">
-            <h3>About</h3>
-            <hr />
-            <img src="~/Multimedia/myindigo_logo.png" alt="ka" />
-            <h4>MyIdigo</h4>
-            <p>blablablabla</p>
-        </section>
+            <!---------About------------------------------->
+            <section id="about">
+                <h3>About</h3>
+                <hr />
+                <img src="~/Multimedia/myindigo_logo.png" alt="ka" />
+                <h4>MyIdigo</h4>
+                <p>blablablabla</p>
+                <!--------------------------------------------->
+                <div id="PfeilRezension">
+                    <a href="#Rezension">
+                        <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
 
-        <!---------Contact------------------------------->
-        <section id="Rezension">
-            <h3>Rezension</h3>
-            <hr />
-            <form>
-                <input type="email" tabindex="1" placeholder="E-Mail" /><br />
-                <input type="text" tabindex="2" placeholder="Betreff" /><br />
-                <textarea tabindex="3" placeholder="text"></textarea><br />
-                <input calss="button" type="submit" />
+                    </a>
+                </div>
+            </section>
 
-            </form>
-        </section>
+            <!---------Contact------------------------------->
+            <section id="Rezension">
+                <h3>Rezension</h3>
+                <hr />
+                <form>
+                    <input type="email" tabindex="1" placeholder="E-Mail" /><br />
+                    <input type="text" tabindex="2" placeholder="Betreff" /><br />
+                    <textarea tabindex="3" placeholder="text"></textarea><br />
+                    <input calss="button" type="submit" />
 
-
-        <main>
-            @RenderBody()
-
-        </main>
-
-        <!---------Footer------------------------------->
-        <footer>
-            <p>
-                &copy; MyIddigo
-            </p>
-        </footer>
+                </form>
+            </section>
 
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @await RenderSectionAsync("Scripts", required: false)
-    </body>
-</centre>
+            <main>
+                @RenderBody()
+
+            </main>
+
+            <!---------Footer------------------------------->
+            <footer id="footer">
+                <p style="border:solid">
+                    &copy; MyIddigo
+                </p>
+            </footer>
+
+
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            @await RenderSectionAsync("Scripts", required: false)
+        </centre>
+</body>
+
 </html>
