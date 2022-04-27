@@ -3,7 +3,7 @@
     padding : 0;
     height :100%;
     text-align :center ;
-    background-color: red;
+    background-color: darkgray;
 }
 
 section {
@@ -81,7 +81,7 @@ header{
     background: gray;
     z-index: 1;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    background-color:red;
+    background-color:darkgray;
 }
 
 #logo{
@@ -131,9 +131,21 @@ header nav ul li:hover {
 /****************FOOTER****************************/
 
 footer {
-    background-color: aqua;
+    background-color: lightgray;
 }
 
+
+/****************Erstellung***************************/
+
+#Gericht1 {
+    float: left;
+    margin: 0 0 0 50px;
+}
+
+#Gericht2 {
+    float: right;
+    margin: 0 0 0 50px;
+}
 
 
 

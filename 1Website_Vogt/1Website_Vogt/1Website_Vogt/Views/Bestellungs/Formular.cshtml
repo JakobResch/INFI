@@ -1,0 +1,60 @@
+﻿@model _1Website_Vogt.Models.User
+
+@{
+    ViewData["Title"] = "Lieblingsplatz";
+}
+
+
+
+
+<h1>Lieblingsplatz</h1>
+<form asp-controller="Home" asp-action="registration" method="post">
+    <p>
+        <label asp-for="Vorname"> Vorname </label><br />
+        <input type="text" asp-for="Vorname" />
+        <span asp-validation-for="Vorname"></span>
+    </p>
+    <p>
+        <label asp-for="Nachname"> Nachname </label><br />
+        <input type="text" asp-for="Nachname" />
+        <span asp-validation-for="Nachname"></span>
+    </p>
+    <p>
+        <label asp-for="Email"> Email </label><br />
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </p>
+    <p>
+        <label asp-for="Ort"> Wohnort </label><br />
+        <input type="text" asp-for="Ort" />
+        <span asp-validation-for="Ort"></span>
+    </p>
+    <p>
+        <label asp-for="Postleitzahl"> Postleitzahl </label><br />
+        <input type="text" asp-for="Ort" />
+        <span asp-validation-for="Ort"></span>
+    </p>
+    <p>
+        <label asp-for="Strasse"> Straßenname </label><br />
+        <input type="text" asp-for="Strasse" />
+    </p>
+    <p>
+        <label asp-for="Hausnummer"> Hausnummer </label><br />
+        <input type="text" asp-for="Hausnummer" />
+        <span asp-validation-for="Hausnummer"></span>
+    </p>
+    <p>
+        <label asp-for="Zahlung"> Zahlungsmethode </label><br />
+        <select asp-for="Zahlung">
+            <option value="0">Paybal</option>
+            <option value="1">Bar</option>
+            <option value="2">Kreditkarte</option>
+        </select>
+        <span asp-validation-for="Zahlung"></span>
+    <p>
+        <input type="submit" value="absenden" />
+        <input type="reset" value="abbrechen" />
+    </p>
+
+    </p>
+</form>

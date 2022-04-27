@@ -1,4 +1,85 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<centre>
+    <!---------Home------------------------------->
+
+    <section id="Home">
+        <hr />
+
+
+        <!------Diashow----------------------------->
+        <div id="verschieben" class="w3-content w3-section solid" style="max-width:500px">
+
+            <img class="mySlides solid" src="~/Multimedia/bild2.png" style="width:100%" />
+            <img class="mySlides solid" src="~/Multimedia/bild3.png" style="width:100%" />
+            <img class="mySlides solid" src="~/Multimedia/bild4.png" style="width:100%" />
+            <img class="mySlides solid" src="~/Multimedia/bild5.png" style="width:100%" />
+
+        </div>
+
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+        </script>
+        <!------------------------------------->
+        <div id="PfeilAbout">
+            <a href="#about">
+                <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
+
+            </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>
+
+    <!---------About------------------------------->
+    <section id="about">
+        <h3>About</h3>
+        <hr />
+        <img src="~/Multimedia/myindigo_logo.png" alt="ka" />
+        <h4>MyIdigo</h4>
+        <p>blablablabla</p>
+        <!--------------------------------------------->
+        <div id="PfeilRezension">
+            <a href="#Rezension">
+                <img src="~/Multimedia/pfeil.png.png" alt="Pfeil" height="40" width="50" />
+
+            </a>
+        </div>
+    </section>
+
+    <!---------Contact------------------------------->
+    <section id="Rezension">
+        <h3>Rezension</h3>
+        <hr />
+        <form>
+            <input type="email" tabindex="1" placeholder="E-Mail" /><br />
+            <input type="text" tabindex="2" placeholder="Betreff" /><br />
+            <textarea tabindex="3" placeholder="text"></textarea><br />
+            <input class="button" type="submit" />
+
+        </form>
+        <br>
+        <br>
+        <br>
+    </section>
 
 
 
