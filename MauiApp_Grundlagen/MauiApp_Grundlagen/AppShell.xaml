@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp_Grundlagen.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MauiApp_Grundlagen.Views">
+
+
+    <!--
+        XAML ...    XML for Application () hiermit werden die View's erzeugt
+
+        XML ...     Extendet Markup Language (hiermit können Tags definiert werden)
+	                vergleichabr mit HTML (in HTML sind allerdings die Tags und die Attribute vorgegeben)
+	                mit XML kann man eigene Tags und Attribute definieren
+
+        xmlns ...   XML-Namespace -> entspricht dem using unter C# (import in Java)
+		            nur ein Namespace kann ohne Namen verwendet werden
+
+        MVVM ...    Model View ViewModel 2te Art: Code-Behind-Dateien
+	        Model ... 	Klassen (z.B.: Person, Article, ...) - C#
+	        View ... 	UI (XAML), Der UserINterface wird mit Komponenten zusammengebaut (Label, Button, Editor, ...)
+		
+	        ViewModel ...	    Die Verbindung vom Model zur View - C#
+			                    -> zu einer View gehört immer ein ViewModel
+		    DataBinding ...     Verbindung einer Eigenschaft einer Komponente mit einem Property des ViewModels
+            Commands ...        Sie führen Code aus (z.B.: bei einem Button-Click)
+    
+    
+        Shell: ist für die Navigation (menü) zuständig
+    
+    -->
+
+    <FlyoutItem Title="Counter">
+        <Tab>
+            <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate views:MainPage}"
+            Route="MainPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="About Us">
+        <Tab>
+            <ShellContent
+            Title="Über uns"
+            ContentTemplate="{DataTemplate views:AboutUs}"
+            Route="AboutUs" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Create NEW Article">
+        <Tab>
+            <ShellContent
+            Title="neuer Artikel"
+            ContentTemplate="{DataTemplate views:CreateArticle}"
+            Route="CreateArticle" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="UserRegistration">
+        <Tab>
+            <ShellContent
+            Title="einen User registrieren"
+            ContentTemplate="{DataTemplate views:UserRegistration}"
+            Route="UserRegistration" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

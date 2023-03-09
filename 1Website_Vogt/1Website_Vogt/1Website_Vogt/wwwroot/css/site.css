@@ -1,9 +1,10 @@
 ﻿html, body {
-    margin : 0;
-    padding : 0;
-    height :100%;
-    text-align :center ;
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    background-color: darkgray;
+    
 }
 
 section {
@@ -46,30 +47,18 @@ hr{
     margin: 0 auto 40px auto;
 }
 
-li, #logo {
-    transition: all 300ms;
-    -webkit-transition: all 300ms;
-    -moz-transition: all 300ms;
-    -o-transition: all 300ms;
-}
 
-#PfeilAbout{
+#PfeilAbout {
     padding-top: 100px;
 }
-
-#verschieben{
-    padding-top: 100px;
-}
-
 p.solid {
     border-style: solid;
 }
 
-.mySlides {
-    display: none;
+
+
+
 }
-
-
 /****************HEADER*******************************/
 
 header{
@@ -81,7 +70,7 @@ header{
     background: gray;
     z-index: 1;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    background-color:red;
+    background-color:darkgray;
 }
 
 #logo{
@@ -131,9 +120,8 @@ header nav ul li:hover {
 /****************FOOTER****************************/
 
 footer {
-    background-color: aqua;
+    background-color: lightslategray;
 }
-
 
 
 

@@ -1,0 +1,27 @@
+﻿@model List<_1Website_Vogt.Models.User>
+@{
+    ViewData["Title"] = "Bestellbestaetigung";
+}
+
+<h1>Bestellbestaetigung</h1>
+@if ((Model != null) && (Model.Count >= 1))
+{
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Vorname</td>
+                <td>Nachname</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (User u in Model) {
+                <tr>
+                    <td>@u.user_id</td>
+                    <td>@u.Vorname</td>
+                    <td>@u.Nachname</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

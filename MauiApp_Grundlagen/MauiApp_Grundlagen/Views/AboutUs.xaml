@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp_Grundlagen.Views.AboutUs"
+             Title="AboutUs">
+
+
+    <!-- 
+        View's werden mit Komponenten erzeugt (Label, Editor, Button, ...)
+
+        wichtig: es sollten immer Layout-Manager verwendet werden
+                (VerticalStackLayout, HorizontalStackLayout, Grid, ...)
+
+        Layouts werden aufgrund der unterschiedlichen Displaygrößen verwendet - der Inhalt passt sich automatisch 
+        an die Bildschirmgrößen an (Handy, Windows-PC, ...)
+
+
+
+
+    -->
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <Label 
+            Text="Name: Jakob"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Firma: HTL-Anichstarße"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Tel: 0681 84431813"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

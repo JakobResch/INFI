@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:MauiApp_Grundlagen.Models.Converter"
+             x:Class="MauiApp_Grundlagen.Views.CreateArticle"
+             Title="CreateArticle">
+
+    <ContentPage.Resources>
+        <!-- definiere eine Instanz unseres CategoryConverters - per XML-->
+        <converter:CategoryConverter x:Key="categoryConverter"/>
+    </ContentPage.Resources>
+
+    <!--Grid ... Layout-Manager - Tabellenform -->
+
+
+    <Grid RowDefinitions="4*, 2*, 2*,2*,2*,4*" ColumnDefinitions="4*, 6*">
+        <Label 
+            Text="Artikeldaten"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="Header"
+            FontAttributes="Bold"
+            Grid.Row="0" Grid.Column ="0" Grid.ColumnSpan="2"/>
+        <Label 
+            Text="Artikelname"
+            VerticalOptions="End" 
+            Margin="15"
+            HorizontalOptions="Center"  
+            Grid.Row="1" Grid.Column="0"
+            />
+        <Editor
+            Grid.Column="1" Grid.Row="1"
+            Placeholder="Artikelname"
+            Text="{Binding ArticleName}"
+            VerticalTextAlignment="Center"
+         />
+
+        <Label 
+            Text="Preis"
+            VerticalOptions="End" 
+            Margin="15"
+            HorizontalOptions="Center"  
+            Grid.Row="2" Grid.Column="0"
+            />
+        <Editor
+            Grid.Column="1" Grid.Row="2"
+            Placeholder="Preis"
+            Text="{Binding Price}"
+            VerticalTextAlignment="Center"
+         />
+        <Label 
+            Text="Release Date"
+            VerticalOptions="End" 
+            Margin="15"
+            HorizontalOptions="Center"  
+            Grid.Row="3" Grid.Column="0"
+            />
+        <DatePicker
+            Grid.Column="1" Grid.Row="3"
+            Date="{Binding ReleaseDate}"
+         />
+
+        <Label 
+            Text="Kategorie"
+            VerticalOptions="End" 
+            Margin="15"
+            HorizontalOptions="Center"  
+            Grid.Row="4" Grid.Column="0"
+            />
+        <Picker 
+                ItemsSource="{Binding CategoryItems}"
+                SelectedIndex="{Binding Category, Converter ={StaticResource categoryConverter}}"
+                Grid.Column="1" Grid.Row="4"
+                />
+
+        <Button Text="Artikeldaten eintragen"
+            Command="{Binding CmdCreateArticle}"
+            VerticalOptions="Center" 
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"  
+            Grid.Row="5" Grid.Column="0"/>
+        
+        <Button Text="Artikeldaten leeren"
+            Command="{Binding CmdClear}"
+            VerticalOptions="Center" 
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"  
+            Grid.Row="6" Grid.Column="1"/>
+
+    </Grid>
+</ContentPage>
